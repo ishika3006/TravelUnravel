@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<head>
+ <title>TravelUnravel - Explore Your Dream Destinations</title>
+ <style>
+ body {
+ font-family: Arial, sans-serif;
+ margin: 0;
+ padding: 0;
+ }
+ header {
+ background-color: #FF69B4; 
+ color: white;
+ text-align: center;
+ padding: 15px;
+ font-size: 24px;
+ }
+ main {
+ background-color: white; 
+ padding: 20px;
+ }
+ .subheading-container {
+ overflow: hidden;
+ position: relative;
+ white-space: nowrap;
+ animation: moveSubheading 10s linear infinite;
+ }
+ .subheading {
+ background-color: #1E90FF;
+ color: white;
+ text-align: center;
+ padding: 10px;
+ font-size: 18px;
+ display: inline-block;
+ }
+ @keyframes moveSubheading {
+ 0% {
+ transform: translateX(100%);
+ }
+ 100% {
+ transform: translateX(-100%);
+ }
+ }
+ .destination {
+ border: 1px solid #87CEEB; 
+ border-radius: 8px;
+ margin-bottom: 20px;
+ overflow: hidden;
+ }
+ .destination img {
+ width: 100%;
+ height: auto;
+ }
+ .destination-info {
+ padding: 20px;
+ }
+ h2 {
+ margin-bottom: 10px;
+ color: #1E90FF; 
+ }
+ p {
+ margin-bottom: 20px;
+ }
+ .package-details {
+ display: flex;
+ justify-content: space-between;
+ margin-top: 20px;
+ }
+ .date-selector {
+ margin-top: 20px;
+ }
+ .book-now-button {
+ background-color: #FF69B4; 
+ color: white;
+ padding: 10px;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+ }
+ .book-now-button:hover {
+ background-color: #FF1493;
+ }
+ </style>
+</head>
+<body>
+ <header>
+ <h1>TravelUnravel</h1>
+ </header>
+ <div class="subheading-container">
+ <div class="subheading">
+ Explore Your Dream Destinations
+ </div>
+ </div>
+ <main>
+
+ <!-- Manali -->
+ <div class="destination">
+ <img src="manali.webp" alt="Manali">
+ <div class="destination-info">
+ <h2 style="color: #1E90FF;">Manali</h2>
+ <p>Experience the beauty of snow-capped mountains and serene 
+landscapes in Manali.</p>
+ <div class="package-details">
+ <p>Package Price: 	&#8377 25,000</p>
+ <p>Available Dates: March 15 - March 20</p>
+ </div>
+ <div class="date-selector">
+ <label for="dateManali">Select Date:</label>
+ <input type="date" id="dateManali" name="dateManali" 
+min="2023-01-01" max="2023-12-31">
+ <button class="book-now-button" 
+onclick="bookPackage('Manali')">Book Now</button>
+ </div>
+ </div>
+ </div>
+
+ <!-- Goa -->
+ <div class="destination">
+ <img src="https://gumlet.assettype.com/
+outlooktraveller%2Fimport%2Foutlooktraveller%2Fpublic%2Fuploads%2Farticles%2
+Fexplore%2Fsumit-sourav-eSRtxPd9q1c-unsplash.jpg?
+auto=format%2Ccompress&fit=max&format=webp&w=640&dpr=2.0" alt="Goa">
+ <div class="destination-info">
+ <h2 style="color: #1E90FF;">Goa</h2>
+ <p>Relax on the pristine beaches and experience the vibrant nightlife in 
+Goa.</p>
+ <div class="package-details">
+ <p>Package Price: 	&#8377 30,000</p>
+ <p>Available Dates: April 5 - April 12</p>
+ </div>
+ <div class="date-selector">
+ <label for="dateGoa">Select Date:</label>
+ <input type="date" id="dateGoa" name="dateGoa" min="2023-01-01" 
+max="2023-12-31">
+ <button class="book-now-button" onclick="bookPackage('Goa')">Book 
+Now</button>
+ </div>
+ </div>
+ </div>
+
+ <!-- Kerala -->
+ <div class="destination">
+ <img src="https://cdn.tourradar.com/s3/tour/
+1500x800/232143_62cfcbfbb1610.jpg" alt="Kerala">
+ <div class="destination-info">
+ <h2 style="color: #1E90FF;">Kerala</h2>
+ <p>Explore the backwaters, lush greenery, and cultural richness of 
+Kerala.</p>
+ <div class="package-details">
+ <p>Package Price: 	&#8377 35,000</p>
+ <p>Available Dates: May 10 - May 17</p>
+ </div>
+ <div class="date-selector">
+ <label for="dateKerala">Select Date:</label>
+ <input type="date" id="dateKerala" name="dateKerala" 
+min="2023-01-01" max="2023-12-31">
+ <button class="book-now-button" 
+onclick="bookPackage('Kerala')">Book Now</button>
+ </div>
+ </div>
+ </div>
+
+
+ <!-- Jammu and Kashmir -->
+ <div class="destination">
+ <img src="https://www.savaari.com/blog/wp-content/uploads/2023/06/
+Kashmir.in1_.webp" alt="Jammu and Kashmir">
+ <div class="destination-info">
+ <h2 style="color: #1E90FF;">Jammu and Kashmir</h2>
+ <p>Experience the breathtaking landscapes and cultural diversity of 
+Jammu and Kashmir.</p>
+ <div class="package-details">
+ <p>Package Price: 	&#8377 40,000</p>
+ <p>Available Dates: June 8 - June 15</p>
+ </div>
+ <div class="date-selector">
+ <label for="dateJammuKashmir">Select Date:</label>
+ <input type="date" id="dateJammuKashmir" 
+name="dateJammuKashmir" min="2023-01-01" max="2023-12-31">
+ <button class="book-now-button" onclick="bookPackage('Jammu and Kashmir')">Book Now</button>
+ </div>
+ </div>
+ </div>
+
+
+ <!-- Leh Ladakh -->
+ <div class="destination">
+ <img src="https://www.tourism-of-india.com/blog/wp-content/uploads/
+2022/01/Places-to-Visit-in-Ladakh.jpg" alt="Leh Ladakh">
+ <div class="destination-info">
+ <h2 style="color: #1E90FF;">Leh Ladakh</h2>
+ <p>Embark on an adventurous journey to the mesmerizing landscapes of 
+Leh Ladakh.</p>
+ <div class="package-details">
+ <p>Package Price: 	&#8377 45,000</p>
+ <p>Available Dates: July 20 - July 27</p>
+ </div>
+ <div class="date-selector">
+ <label for="dateLehLadakh">Select Date:</label>
+ <input type="date" id="dateLehLadakh" name="dateLehLadakh" 
+min="2023-01-01" max="2023-12-31">
+ <button class="book-now-button" onclick="bookPackage ('Leh Ladakh')">Book Now</button>
+ </div>
+ </div>
+ </div>
+
+
+ <!-- Jaipur -->
+ <div class="destination">
+ <img src="jaipur.jpg" alt="Jaipur">
+ <div class="destination-info">
+ <h2 style="color: #1E90FF;">Jaipur</h2>
+ <p>Explore the rich history and vibrant culture of the Pink City - Jaipur.</p>
+ <div class="package-details">
+ <p>Package Price: 	&#8377 28,000</p>
+ <p>Available Dates: August 10 - August 17</p>
+ </div>
+ <div class="date-selector">
+ <label for="dateJaipur">Select Date:</label>
+ <input type="date" id="dateJaipur" name="dateJaipur" 
+min="2023-01-01" max="2023-12-31">
+ <button class="book-now-button" 
+onclick="bookPackage('Jaipur')">Book Now</button>
+ </div>
+ </div>
+ </div>
+
+ </main>
+ <script>
+ function bookPackage(destination) {
+ var selectedDate = document.getElementById('date' + destination.replace(/
+\s+/g, '')).value;
+ alert('Booking confirmed for ' + destination + ' on ' + selectedDate);
+ }
+ </script>
+</body>
+</html>
